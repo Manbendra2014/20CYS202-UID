@@ -1,0 +1,105 @@
+/*
+Author : Manbendra Satpathy
+Created Date : 27 December 2022
+Updated Date : 07 January 2022
+Description : CSS for Events Page
+*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	overflow-x: hidden;
+	text-align: center;
+}
+
+#image_carousel {
+	z-index: 0;
+	max-width: 900px;
+	width: 80vw;
+	height: 40vw;
+	overflow: hidden;
+	max-height: 450px;
+	margin-bottom: 5rem;
+}
+
+#main_heading {
+	font-family: 'Courier';
+	text-align: center;
+	font-weight: bold;
+	font-size: 5rem;
+	color: white;
+}
+
+.main_heading2 {
+	font-family: 'Consolas';
+	margin-bottom: 3rem;
+	text-align: center;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.heading {
+	color: black;
+	font-family: 'Consolas';
+	font-weight: semibold;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.content {
+	color: black;
+	font-size: 22px;
+	margin-top: 1rem;
+	font-family: 'Consolas';
+
+}
+
+.row {
+	padding: 0 4rem;
+	display: block;
+}
+
+#whole_content {
+	overflow: hidden;
+	height: 90%;
+	padding: 3rem;
+	padding-bottom: 5rem;
+	border-radius: 20px;
+	background-color: white;
+	margin: 1rem;
+}
+
+#whole img {
+	display: block;
+	width: 18rem;
+	height: 12rem;
+	overflow: hidden;
+	object-fit: cover;
+	margin: auto;
+}
+
+@media (max-width: 992px) {
+	#whole img {
+		width: 24rem;
+		height: 14rem;
+	}
+
+	#whole_content {
+		height: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.row {
+		padding: 0 2rem;
+	}
+
+	.content {
+		font-size: 0.8rem;
+	}
+}

@@ -1,0 +1,260 @@
+<!--
+Author : Manbendra Satpathy
+Created Date : 27 December 2023
+Update Date : 7 January 2023
+Description : Registration Ppage for Anokha 
+-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Registration</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="icon" type="image/x-icon" href="../image/logo.png">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../css/register.css">
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body style="background-color: black;">
+      <div class="container">
+         <a href="../index.html"><img src="https://cdn-icons-png.flaticon.com/512/318/318504.png" style="background-color:white;" width="50px" height="60px"></a>
+         <center>
+            <b>
+               <header style="font-family:Consolas;font-size:50px;color:white;">Anokha Registration Form</header>
+            </b>
+         </center>
+         <form action="#">
+            <div class="form first">
+               <div class="details personal">
+                  <br>
+                  <p style="font-family:Consolas;font-size:20px;color:gold;"><b>* marked fields are mandatory</b></p>
+                  <br>
+                  <center><span class="title" style="font-family:Consolas;font-size:30px;color:gold;">Personal Details<br></span></center>
+                  <br>
+                  <div class="fields">
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Name *</label>
+                        <input type="text" id="name" onchange="NameCheck()" style="font-family:Consolas;font-size:18px;" placeholder="Enter your name" required>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Date of Birth </label>
+                        <input type="date" id="dob" style="font-family:Consolas;font-size:18px;" placeholder="Enter birth date">
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Email * </label>
+                        <input type="email" id="email" onchange="ValidateEmail()" style="font-family:Consolas;font-size:18px;" placeholder="Enter your email" required>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Mobile Number *</label>
+                        <input type="number" id="mobilenumber" size="10" onchange="PhoneNumberCheck()" style="font-family:Consolas;font-size:18px;" placeholder="Enter mobile number" required>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Gender</label>
+                        <select id="gender" style="font-family:Consolas;font-size:18px;">
+                           <option disabled selected style="font-family:Consolas;font-size:18px;">Select gender</option>
+                           <option style="font-family:Consolas;font-size:18px;">Male</option>
+                           <option style="font-family:Consolas;font-size:18px;">Female</option>
+                           <option style="font-family:Consolas;font-size:18px;">Non-boinary</option>
+                        </select>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">College *</label>
+                        <input type="text" id="college" style="font-family:Consolas;font-size:18px;" placeholder="Enter name of your college" required>
+                     </div>
+                  </div>
+                  <br>
+                  <br>
+                  <center><span class="title" style="font-family:Consolas;font-size:30px;color:gold;" >ID - Card Details<br><br></span></center>
+                  <p style="font-family:Consolas;font-size:28px;color:white;">Are you a student of Amrita Vishwa Vidyapeetham University ? : </p>
+                  <label class="radio-inline" style="font-family:Consolas;font-size:18px;color:white;">
+                  <input type="radio" id="id" name="optradio" style="height:20px; width:20px;color:white;"> &nbsp;Yes
+                  </label>
+                  <br>
+                  <br>
+                  <label class="radio-inline" style="font-family:Consolas;font-size:18px;color:white;">
+                  <input type="radio" id="id" name="optradio" style="height:20px; width:20px;color:white;"> &nbsp;No
+                  </label>  
+                  <br>
+                  <br>
+                  <br>                   
+                  <div class="fields">
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;color:white;">ID Type</label>
+                        <select style="font-family:Consolas;font-size:18px;">
+                           <option disabled selected style="font-family:Consolas;font-size:18px;">Select ID type</option>
+                           <option style="font-family:Consolas;font-size:18px;">Hosteller</option>
+                           <option style="font-family:Consolas;font-size:18px;">Day Scholar</option>
+                        </select>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">ID Number *</label>
+                        <input type="text" id="idnumber" style="font-family:Consolas;font-size:18px;" placeholder="Enter ID number" required>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Issued Authority *</label>
+                        <input type="text" id="collegename" style="font-family:Consolas;font-size:18px;" placeholder="Enter name of your college" required>
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Issued Date </label>
+                        <input type="date" id="issued" style="font-family:Consolas;font-size:18px;" placeholder="Enter your issued date">
+                     </div>
+                     <div class="input-field">
+                        <label style="font-family:Consolas;font-size:28px;">Valid Upto Date </label>
+                        <input type="date" id="valid" style="font-family:Consolas;font-size:18px;" placeholder="Enter expiry date">
+                     </div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>  
+                  <p style="font-family:Consolas;font-size:28px;color:white;">Upload a copy of your ID card : </p>
+                  <br>
+         <form>
+         <label for="myfile" style="font-family:Consolas;font-size:25px;color:white;">Select a file : <br><br><input type="file" id="file" name="myfile"></label>
+         </form>  
+         <br>
+         <br>
+         <br>
+         <center><span class="title" style="font-family:Consolas;font-size:30px;color:gold;">Details about Place of Residence <br><br></span></center>
+         <div class="fields">
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Address Type</label>
+         <select style="font-family:Consolas;font-size:18px;">
+         <option style="font-family:Consolas;font-size:18px;" disabled selected>Select Address type</option>
+         <option style="font-family:Consolas;font-size:18px;">Permanent</option>
+         <option style="font-family:Consolas;font-size:18px;">Temporary</option>
+         </select>
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Nationality </label>
+         <input type="text" id="nationality" style="font-family:Consolas;font-size:18px;" placeholder="Enter nationality">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">State</label>
+         <input type="text" id="state" style="font-family:Consolas;font-size:18px;" placeholder="Enter your state">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">District</label>
+         <input type="text" id="district" style="font-family:Consolas;font-size:18px;" placeholder="Enter your district">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Block Number</label>
+         <input type="number" id="block" style="font-family:Consolas;font-size:18px;" placeholder="Enter block number">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Ward Number</label>
+         <input type="number" id="ward" style="font-family:Consolas;font-size:18px;" placeholder="Enter ward number">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Street Name</label>
+         <input type="text" id="street" style="font-family:Consolas;font-size:18px;" placeholder="Enter street name">
+         </div>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">House Name / Number </label>
+         <input type="text" id="house" style="font-family:Consolas;font-size:18px;" placeholder="Enter house name / number">
+         </div>
+         </div>
+         <br>
+         <br>
+         <center><span class="title" style="font-family:Consolas;font-size:30px;color:gold;">Account Details <br><br></span></center>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Username * : &nbsp;</label>
+         <input type="text" id="usrname" name="usrname" style="font-family:Consolas;font-size:18px;" placeholder="Enter your username" required>
+         </div>
+         <br>
+         <br>
+         <div class="input-field">
+         <label style="font-family:Consolas;font-size:28px;">Password * : &nbsp;</label>
+         <input type="password" onkeyup="enableSubmit()" id="psw" name="psw" style="font-family:Consolas;font-size:18px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z/W+]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter and one special character, and at least 8 or more characters" placeholder="Enter your password" required>
+         </div>
+         <div id="message">
+         <h3 style="font-family:Consolas;font-size:30px;color:white;">Password can contain the following:</h3>
+         <p id="letter" class="invalid" style="font-family:Consolas;font-size:22px;">A <b>lowercase</b> letter</p>
+         <p id="capital" class="invalid" style="font-family:Consolas;font-size:22px;">A <b>capital (uppercase)</b> letter</p>
+         <p id="number" class="invalid" style="font-family:Consolas;font-size:22px;">A <b>number</b></p>
+         <p id="special" class="invalid" style="font-family:Consolas;font-size:22px;">A <b>special character</b></p>
+         <br>
+         <h3 style="font-family:Consolas;font-size:30px;color:white;">Password must contain the following:</h3>
+         <p id="length" class="invalid" style="font-family:Consolas;font-size:22px;">Minimum <b>8 characters</b></p>
+         </div>
+         <br>
+         <br>
+         <center><span class="title" style="font-family:Consolas;font-size:30px;color:gold;">Event Details<br><br></span></div></center>
+         <p style="font-family:Consolas;font-size:28px;color:white;">You can select a total of 9 events from the following options : </p>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check1" id="check1">
+         <label class="layout" for="check1" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Group Dance</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check2" id="check2">
+         <label class="layout" for="check2" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Solo Dance</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check3" id="check3">
+         <label class="layout" for="check3" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Solo Music</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check4" id="check4">
+         <label class="layout" for="check4" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Pencil Drawing</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check5" id="check5">
+         <label class="layout" for="check5" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Word Hunt</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check6" id="check6">
+         <label class="layout" for="check6" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Gaming</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check7" id="check7">
+         <label class="layout" for="check7" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Mime</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check8" id="check8">
+         <label class="layout" for="check8" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Photography</label>
+         <br>
+         <input type="checkbox"style="height:20px; width:20px;" class="check" name="check9" id="check9">
+         <label class="layout" for="check9" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;General Quiz</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check10" id="check10">
+         <label class="layout" for="check10" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Code Triathlon</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check11" id="check11">
+         <label class="layout" for="check11" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Dark Maze</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check12" id="check12">
+         <label class="layout" for="check12" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Dev Heist</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check13" id="check13">
+         <label class="layout" for="check13" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Web Designing</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check14" id="check14">
+         <label class="layout" for="check14" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Hacker's Asylum</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check15" id="check15">
+         <label class="layout" for="check15" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Codolympics</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check16" id="check16">
+         <label class="layout" for="check16" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Data Whiz</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check17" id="check17">
+         <label class="layout" for="check17" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Reverse Gear</label>
+         <br>
+         <input type="checkbox" style="height:20px; width:20px;" class="check" name="check18" id="check18">
+         <label class="layout" for="check18" style="font-family:Consolas;font-size:28px;color:white;">&nbsp;Bob the Builder</label>
+         <br>           
+         <br>                     
+         <p style="font-family:Consolas;font-size:30px;color:white;">Click to receive more updates : </p>
+         <br>
+         <label class="switch">
+         <input type="checkbox" id="togBtn">
+         <div class="slider round"></div>
+         </label>
+         <br>
+         <br>
+         <p style="font-family:Consolas;font-size:30px;color:white;">Please write your suggestions on how can we improve the techfest :</p>
+         <textarea rows="4" cols="165"></textarea>
+         <br>
+         <br>
+         <center><button style="color:white;background-color: #04AA6D; border-radius: 6px;font-size:25px;font-family:Consolas;" onclick="SubmitData()" href="./username_password.html">Submit</button></center>
+         <br>
+         </div>
+         </form>
+      </div>
+      <script src="../js/register.js"></script>
+   </body>
+</html>
